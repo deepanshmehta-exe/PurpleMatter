@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PurpleMatter - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">PurpleMatter</a>
+                <div class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="shop.html">Shop</a>
+                    <a href="about.html">About</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-center">
+            <h1>Level Up Your<br>Style</h1>
+            <p>
+                Discover premium streetwear and trendy designs
+                with a bold black-purple aesthetic.
+            </p>
+            <a href="shop.html" class="hero-btn">Shop Now</a>
+        </div>
+    </section>
+
+
+    <div class="container">
+        <h2 class="section-title">Featured Products</h2>
+        <div class="product-grid">
+
+            <div class="product-card">
+                <img src="images/Shadow-Hoodie.png" alt="Shadow Hoodie - Premium black hoodie with purple accents">
+                <div class="product-details">
+                    <h3>Shadow Hoodie</h3>
+                    <div class="price">$54.99</div>
+                    <button class="add-btn" onclick="orderWhatsApp('Shadow Hoodie', 54.99)">Order on WhatsApp</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <img src="images/ShadowFlex-Cargo-Pants.png" alt="ShadowFlex Cargo Pants - Tactical black cargo pants">
+                <div class="product-details">
+                    <h3>ShadowFlex Cargo Pants</h3>
+                    <div class="price">$44.99</div>
+                    <button class="add-btn" onclick="orderWhatsApp('ShadowFlex Cargo Pants', 44.99)">Order on
+                        WhatsApp</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 PurpleMatter. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function orderWhatsApp(productName, price) {
+            const name = prompt('Name');
+            const size = prompt('Size (M/L/XL)');
+            const qty = prompt('Qty', '1');
+            const city = prompt('City');
+            const message = `${productName} Order%0AName: ${name}%0ASize: ${size}%0AQty: ${qty}%0ATotal: $${(price * parseFloat(qty || 1)).toFixed(2)}%0ACity: ${city}%0AConfirm order!`;
+            window.open(`https://wa.me/919876433269?text=${message}`);
+        }
+    </script>
+</body>
+
+</html>
