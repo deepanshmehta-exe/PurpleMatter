@@ -150,7 +150,7 @@
             const name = prompt('Name');
             const size = prompt('Size (M/L/XL)');
             const qty = prompt('Qty', '1');
-            const city = prompt('Address');
+            const city = prompt('City');
             const message = `${productName} Order%0AName: ${name}%0ASize: ${size}%0AQty: ${qty}%0ATotal: $${(price * parseFloat(qty || 1)).toFixed(2)}%0ACity: ${city}%0AConfirm order!`;
             window.open(`https://wa.me/919876433269?text=${message}`);
         }
